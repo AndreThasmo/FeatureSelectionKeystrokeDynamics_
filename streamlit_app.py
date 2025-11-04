@@ -57,7 +57,7 @@ sns.set_theme(style="whitegrid", palette="deep", context="notebook")
 st.set_page_config(
     page_title="Keystroke Dynamics Dashboard",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 
 
@@ -86,7 +86,6 @@ def apply_theme(dark: bool) -> None:
         body { color: #e0e0e0; background-color: #0e1117; }
         .block-container { max-width: 1200px; padding-top: 0rem; padding-bottom: 2rem; }
         [data-testid="stSidebar"] { background-color: #111827; }
-        [data-testid="stHeader"] { display: none; }
         h1, h2, h3 { font-weight: 600; color: #e0e0e0; }
         [data-testid="stMetricValue"] { font-variant-numeric: tabular-nums; color: #e0e0e0; }
         </style>
@@ -105,7 +104,6 @@ def apply_theme(dark: bool) -> None:
         <style>
         .block-container { max-width: 1200px; padding-top: 0rem; padding-bottom: 2rem; }
         [data-testid="stSidebar"] { background-color: #f8f9fb; }
-        [data-testid="stHeader"] { display: none; }
         h1, h2, h3 { font-weight: 600; }
         [data-testid="stMetricValue"] { font-variant-numeric: tabular-nums; }
         </style>
@@ -127,6 +125,8 @@ with col_title:
         unsafe_allow_html=True,
     )
 st.markdown("---")
+
+st.caption("Dica: se a barra lateral não aparecer, use a seta no canto superior esquerdo (☰) para abrir.")
 
 
 # Função para carregar o CSV mais recente automaticamente
