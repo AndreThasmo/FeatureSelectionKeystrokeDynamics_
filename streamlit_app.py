@@ -85,7 +85,9 @@ def apply_theme(dark: bool) -> None:
         <style>
         body { color: #e0e0e0; background-color: #0e1117; }
         .block-container { max-width: 1200px; padding-top: 0rem; padding-bottom: 2rem; }
-        [data-testid="stSidebar"] { background-color: #111827; }
+        [data-testid="stSidebar"] { background-color: #0e1117; }
+        [data-testid="stSidebar"] > div { background-color: inherit; }
+        [data-testid="stSidebar"] * { color: #e0e0e0; }
         h1, h2, h3 { font-weight: 600; color: #e0e0e0; }
         [data-testid="stMetricValue"] { font-variant-numeric: tabular-nums; color: #e0e0e0; }
         </style>
@@ -103,7 +105,8 @@ def apply_theme(dark: bool) -> None:
         css = """
         <style>
         .block-container { max-width: 1200px; padding-top: 0rem; padding-bottom: 2rem; }
-        [data-testid="stSidebar"] { background-color: #f8f9fb; }
+        [data-testid="stSidebar"] { background-color: #ffffff; }
+        [data-testid="stSidebar"] > div { background-color: inherit; }
         h1, h2, h3 { font-weight: 600; }
         [data-testid="stMetricValue"] { font-variant-numeric: tabular-nums; }
         </style>
